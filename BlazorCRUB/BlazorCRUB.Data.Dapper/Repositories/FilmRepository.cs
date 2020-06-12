@@ -70,4 +70,3 @@ namespace BlazorCRUB.Data.Dapper.Repositories
         }
     }
 }
-

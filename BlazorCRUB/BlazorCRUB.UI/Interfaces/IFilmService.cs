@@ -19,4 +19,4 @@ namespace BlazorCRUB.UI.Interfaces
 
     }
 }
-}
+

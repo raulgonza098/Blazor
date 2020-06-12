@@ -22,7 +22,7 @@ namespace BlazorCRUB.UI.Services
 
         public Task<bool> DeleteFilm(int id)
         {
-            throw new NotFiniteNumberException();
+            return _filmRepository.DeleteFilm(id);
         }
 
         public Task<IEnumerable<Film>> GetAllFilms()
@@ -32,7 +32,7 @@ namespace BlazorCRUB.UI.Services
 
         public Task<Film> GetDetails(int id)
         {
-            throw new NotFiniteNumberException();
+            return _filmRepository.GetFilmDetails(id);
         }
 
         public Task<bool> SaveFilm(Film film)
@@ -40,7 +40,8 @@ namespace BlazorCRUB.UI.Services
             if (film.Id == 0)
                 return _filmRepository.InsertFilm(film);
             else
-                return null;
+                return _filmRepository.UpdateFilm(film);
         }
+
     }
 }
